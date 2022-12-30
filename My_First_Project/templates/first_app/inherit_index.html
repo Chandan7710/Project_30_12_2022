@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+{% extends "first_app/base.html" %}
+
+{% load my_filters %}
+
+{% block body_block %}
+
+<h1> Yes Iam From Inherit Index Page</h1>
+
+<h2>{{ sample_text | upper }}</h2>
+<h2>{{ sample_text1 }}</h2>
+<h2>{{ sample_text2 | lower }}</h2>
+<h2>{{ sample_text3 | add:67 }}</h2>
+<h2>{{ sample_text4 | capfirst }}</h2>
+<h2>{{ sample_text5 | cut:"o" }}</h2>
+<h2>{{ sample_text6.release_date }}</h2>
+<h2>{{ sample_text7.release_date | date:"D, m M Y" }}</h2>
+<h2>{{ sample_text8 | custom_filter }}</h2>
+
+{% endblock %}
